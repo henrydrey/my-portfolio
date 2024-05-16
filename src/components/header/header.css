@@ -1,0 +1,23 @@
+.scroll-header {
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.nav_close,
+.nav_toggle {
+    display: none;
+}
+
+
+/*===================  BREAKPOINTS  ===================*/
+/* @media screen and (max-width: 768px) {
+    .header {
+        top: initial;
+        bottom: 0;
+    }
+
+    .nav {
+        height: 3rem;
+    }
+}
+
+@media screen and (max-width: 350px) {} */

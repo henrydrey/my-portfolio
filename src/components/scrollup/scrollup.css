@@ -1,0 +1,34 @@
+/*  show scroll  */
+.show-scroll {
+    bottom: 3rem;
+}
+
+
+/*====================== BREAKPOINTS ======================*/
+/*=== For Large Devices ===*/
+@media screen and (max-width: 992px) {
+    .scrollup {
+        right: 1.5rem;
+        padding: 0.25rem 0.4rem;
+    }
+
+    .scrollup_icon {
+        font-size: 1.25rem;
+    }
+  }
+  
+  
+  /*=== For Medium Devices ===*/
+  @media screen and (max-width: 768px) {
+    .show-scroll {
+        bottom: 4rem;
+    }
+  }
+  
+  
+  /*=== For Small Devices ===*/
+  @media screen and (max-width: 350px) { 
+    .scrollup {
+        right: 1rem;
+    }
+  }
