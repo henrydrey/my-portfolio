@@ -1,5 +1,5 @@
 import React from 'react'
-import resume from "../../assets/CV of Henry Danful Kofi Mensah.pdf"
+import resume from "../../assets/CV of Henry Mensah.pdf"
 import { Link } from 'react-router-dom'
 import { UilDownloadAlt } from "@iconscout/react-unicons"
 import { UilSmileWinkAlt } from "@iconscout/react-unicons"

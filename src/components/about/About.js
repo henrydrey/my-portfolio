@@ -1,6 +1,6 @@
 import React from 'react'
 import AboutImg from "../../assets/about.jpg"
-import resume from "../../assets/CV of Henry Danful Kofi Mensah.pdf"
+import resume from "../../assets/CV of Henry Mensah.pdf"
 import Info from './Info'
 import { UilDownloadAlt } from "@iconscout/react-unicons"
 
