@@ -5,7 +5,7 @@ import { UilHeadphones } from '@iconscout/react-unicons'
 
 const infoTools = [
   { icon: <UilAward size="25" color="black" className=" text-[1.5rem] text-title-color mb-mb-0-5" />, title: `Experience`, detail: `2 years working`},
-  { icon: <UilBriefcaseAlt size="25" color="black" className=" text-[1.5rem] text-title-color mb-mb-0-5" />, title: `Completed`, detail: `10+ projects`},
+  { icon: <UilBriefcaseAlt size="25" color="black" className=" text-[1.5rem] text-title-color mb-mb-0-5" />, title: `Completed`, detail: `5+ projects`},
   { icon: <UilHeadphones size="25" color="black" className=" text-[1.5rem] text-title-color mb-mb-0-5" />, title: `Support`, detail: `Online 24h/7days`},
 ]
 

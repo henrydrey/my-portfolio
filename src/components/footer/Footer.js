@@ -37,7 +37,7 @@ const Footer = () => {
                     <Link to='https://www.linkedin.com/in/henrykofimensah/' className=' p-[0.4rem] lg:p-[0.25rem] text-title-color hover:text-title-color-dark' target='_blank'>
                         <UilLinkedin size="25"/>
                     </Link>
-                    <Link to='https://www.x.com/henrydrey_/' className='p-[0.4rem] lg:p-[0.25rem] text-title-color hover:text-title-color-dark' target='_blank'>
+                    <Link to='https://www.github.com/henrydrey_/' className='p-[0.4rem] lg:p-[0.25rem] text-title-color hover:text-title-color-dark' target='_blank'>
                         <UilGithub size="25" />
                     </Link>
                     <Link to='https://twitter.com/henrydrey_' className='p-[0.4rem] lg:p-[0.25rem] text-title-color hover:text-title-color-dark' target='_blank'>
