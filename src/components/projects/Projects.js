@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import littlelemon from "../../assets/littlelemon.png"
 import { UilGithub } from "@iconscout/react-unicons"
 import { UilLink } from "@iconscout/react-unicons"
+import { UilPuzzlePiece } from "@iconscout/react-unicons"
 
 
 const projectsList = [
@@ -30,7 +31,10 @@ const Projects = () => {
     return (
         <section className='pt-[6rem] px-0 pb-[2rem] md:pb-[4rem]' id='projects'>
             <h2 className='text-h1-font-size text-title-color text-center'>Projects</h2>
-            <span className='block text-small-font-size mb-[4rem] text-center md:mb-mb-3'>Each project is a unique piece of development</span>
+            <span className='flex flex-row space-x-2 text-small-font-size mb-[4rem] text-center md:mb-mb-3 justify-center'>
+                <span>Each project is a unique piece of development</span>
+                <UilPuzzlePiece size="30" color="green" />
+            </span>
 
             <div className=' grid-row-[repeat(3,_270px)] max-w-[968px] md:mx-auto sm:mx-mb-1 grid gap-[1.5rem]'>
                 <div className='flex py-[1rem] px-[2rem]'>

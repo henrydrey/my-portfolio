@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import emailjs from "@emailjs/browser"
 import { UilTelegramAlt } from "@iconscout/react-unicons"
 import { UilWhatsapp } from "@iconscout/react-unicons"
@@ -8,6 +8,32 @@ import { Link } from 'react-router-dom'
 const Contact = () => {
 
     const form = useRef();
+
+    const [errors, setErrors] = useState({})
+
+    const validateForm = () => {
+        const formData = new FormData(form.current)
+        const name = formData.get('name').trim()
+        const email = formData.get('email').trim()
+        const message = formData.get('message').trim()
+        const newErrors = {}
+
+        if (!name) {
+            newErrors.name = 'Name is required'
+        }
+        if (!email) {
+            newErrors.email = 'Email is required'
+        }
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            newErrors.email = 'Email is invalid'
+        }
+        if (!message) {
+            newErrors.message = 'Message is required'
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0
+    }
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -26,6 +52,13 @@ const Contact = () => {
             //     },
             // );
     };
+    
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if (validateForm()) {
+            sendEmail(e)
+        }
+    }
 
     return (
         <section className='contact pt-[6rem] px-0 pb-[2rem] md:px-0 md:pb-[4rem] md:mx-auto ' id='contact'>
@@ -67,22 +100,25 @@ const Contact = () => {
                 <div className='contact_content'>
                     <h3 className='text-center text-h3-font-size font-font-medium mb-mb-1-5'>Write to me</h3>
 
-                    <form className='w-[360px] md:my-0 md:mx-auto sm:mr-[-2rem] md:mr-0' ref={form} onSubmit={sendEmail}>
-                        <div className='relative mb-mb-2
-                        h-[4rem]'>
+                    <form className='w-[360px] md:my-0 md:mx-auto sm:mr-[-2rem] md:mr-0' ref={form} onSubmit={handleSubmit}>
+                        <div className='relative mb-mb-2 h-[4rem]'>
                             <label htmlFor='' className='absolute top-[-0.75rem] left-[1.25rem] text-smaller-font-size p-[0.25rem] bg-body-color z-[10]'>Name</label>
-                            <input type='text' name='name' className='absolute top-0 left-0 w-full h-full border-[2px] border-solid border-[#0000004D] bg-none text-text-color outline-none rounded-xl p-[1.5rem] z-[1]' placeholder='Type your name' />
+                            <input type='text' name='name' className={`absolute top-0 left-0 w-full h-full border-[2px] border-solid ${errors.name ? 'border-red-500' : 'border-[#0000004D]'} bg-none text-text-color outline-none rounded-xl p-[1.5rem] z-[1]`} placeholder='Your name' />
+                            {errors.name && <p className='text-red-500 text-smaller-font-size mt-1 pt-16'>{errors.name}</p>}
                         </div>
 
                         <div className='relative mb-mb-2
                         h-[4rem]'>
                             <label htmlFor='' className='absolute top-[-0.75rem] left-[1.25rem] text-smaller-font-size p-[0.25rem] bg-body-color z-[10]'>Email</label>
-                            <input type='email' name='email' className='absolute top-0 left-0 w-full h-full border-[2px] border-solid border-[#0000004D] bg-none text-text-color outline-none rounded-xl p-[1.5rem] z-[1]' placeholder='Your email' />
+                            <input type='email' name='email' className={`absolute top-0 left-0 w-full h-full border-[2px] border-solid ${errors.email ? 'border-red-500' : 'border-[#0000004D]'} bg-none text-text-color outline-none rounded-xl p-[1.5rem] z-[1]`} placeholder='Your email' />
+                            {errors.email && <p className='text-red-500 text-smaller-font-size mt-1 pt-16'>{errors.email}</p>}
                         </div>
 
                         <div className='relative mb-mb-2 h-[11rem]'>
                             <label htmlFor='' className='absolute top-[-0.75rem] left-[1.25rem] text-smaller-font-size p-[0.25rem] bg-body-color z-[10]'>Message</label>
-                            <textarea name='message' cols={`30`} rows={`10`} className='absolute top-0 left-0 w-full h-full border-[2px] border-solid border-[#0000004D] bg-none text-text-color outline-none rounded-xl p-[1.5rem] z-[1] resize-none' placeholder='Write your message'></textarea>
+                            <textarea name='message' cols={`30`} rows={`10`} className={`absolute top-0 left-0 w-full h-full border-[2px] border-solid ${errors.message ? 'border-red-500' : 'border-[#0000004D]'} bg-none text-text-color outline-none rounded-xl p-[1.5rem] z-[1] resize-none`} placeholder='Write your message' 
+                            />
+                            {errors.message && <p className='text-red-500 text-smaller-font-size mt-1 pt-44'>{errors.message}</p>}
                         </div>
 
                         <div className='items-center content-center'>

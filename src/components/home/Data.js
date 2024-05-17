@@ -25,9 +25,9 @@ const Data = () => {
       <h1 className='text-big-font-size mb-mb-0-25'>
         Henry Mensah
       </h1>
-      <h3 className=' relative text-h3-font-size pr-[5.4rem] font-normal mb-mb-1 lg:max-w-none lg:mb-mb-2-5 md:mb-mb-1'>Software Developer</h3>
+      <h3 className=' relative text-h3-font-size pr-[5.4rem] font-normal mb-mb-1 lg:max-w-none lg:mb-mb-2-5 md:mb-mb-1'>Front-End Developer</h3>
       <p className='max-w-[400px] mb-mb-2 text-small-font-size'>
-        A passionate software developer, majoring in front-end development but with backend development skills
+        Hi, I'm Henry, a passionate software developer, majoring in front-end development but with backend development skills. I'm based in Accra, Ghana.
       </p>
 
 

@@ -18,7 +18,7 @@ const About = () => {
                 <Info />
 
                 <p className='py-0 pl-0 mb-mb-2-5 lg:py-0 lg-px-[1rem] lg:mb-[2rem] md:p-0 w-full'>
-                    Front-end developer with a proven ability to collaborate effectively with senior developers while spending extra time to be mentored. Driven and enthusiastic front-end developer with 2+ years of experience executing with a plethora of diverse skills, and passion for creating exceptional web experiences.
+                    As a front-end developer, I possess an impressive arsenal of skills in HTML, CSS, JavaScript, React, Tailwind and .NET framework. I excel in designing and maintaining responsive websites that offer a smooth user experience. My expertise lies in crafting dynamic, engaging interfaces through writing clean and optimized code and utilizing cutting-edge development tools and techniques. I am a developer with a proven ability to collaborate effectively with senior developers while spending extra time to be mentored. Driven and enthusiastic front-end developer with a plethora of diverse skills, and passion for creating exceptional web experiences.
                 </p>
 
                 <a download="" href={resume} className='button_dark button--flex bg-title-color text-container-color py-3 px-8 rounded-xl font-font-medium hover:bg-title-color-dark inline-flex items-center'>
